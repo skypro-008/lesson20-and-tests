@@ -49,7 +49,6 @@ Pycharm может предложить вам сделать это после 
 
 - part2/test_mock
 - part2/test_mock_fixture
-- part2/test_DAO
 - part2/test_final
 
 
