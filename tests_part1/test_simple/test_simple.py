@@ -25,7 +25,6 @@
 #        summer("qwe") == "ОШИБКА"
 #        - Реализуйте проверку в функции test_wrong_arg
 #
-
 import os
 
 def summer(*args):

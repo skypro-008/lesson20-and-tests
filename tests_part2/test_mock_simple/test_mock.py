@@ -10,7 +10,9 @@
 #
 # Вместе с тем, данным методом пользуется другой метод show_cities.
 # Который, преобразовывет полученный список этот в строку вида:
+#
 # Расположение офисов: Санкт-Петербург, Самара, Краснодар.
+#
 # Попробуйте мокнуть метод get_adress класса AdressGetter, так чтобы
 # show_cities работал корректно и получал необходимые ему данные.
 # Для этого следуйте следующим шагам
@@ -18,18 +20,19 @@
 # 1. В теле тестовой функции test_show_cities:
 #    - Создайте экземпляр класса AdressGetter     
 #    - Cделайте мок метода get_cities класса AdressGetter
-#    - вызовите метод show_cities и проверьте ожидаемый результат
+#      в качестве аргумента, используйте пожалуйста список: 
+#      ["Санкт-Петербург", "Самара", "Краснодар"], это необходимо для проверки.
+#    - вызовите метод в теле функции show_cities и проверьте ожидаемый результат
 
 import requests
 import os
-from unittest.mock import MagicMock
 import requests
+from unittest.mock import MagicMock
 
 class AdressGetter:
     def get_cities(city):
         response = requests.get(f'https://give_me_adress.com?search={city}')
         return response.data
-    
     
     def show_cities(self):           # Необходимо протестировать этот метод
         cities = self.get_cities()   # Здесь происходить вызов стороннего сервиса
@@ -38,7 +41,7 @@ class AdressGetter:
 
 
 def test_show_cities():
-    # TODO Напишите Ваш код здесь
+    # TODO напишите здесь функцию, тестирующую метод shod_cities
     pass
 
 if __name__=="__main__":
