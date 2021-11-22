@@ -3,7 +3,6 @@ from pathlib import Path
 import os
 import unittest
 import test_simple
-import solution
 
 project_name = Path(os.path.abspath(__file__)).parent.parent.parent.name
 cwd = Path.cwd()
