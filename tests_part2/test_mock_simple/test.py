@@ -25,10 +25,14 @@ class AdressGetter:
         cities = ", ".join(cities)
         return f"Расположение офисов: {cities}."
 
-
-class RightAdressGetter(AdressGetter):
-    def get_cities(self):           # Необходимо протестировать этот метод
-        return ["Санкт-Петербург", "Самара", "Краснодар"]   # Здесь происходить вызов стороннего сервиса
+class BrokenAdressGetter:
+    def get_cities(city):
+        return ["Санкт-Петербург", "Самара", "Краснодар"]
+    
+    def show_cities(self):           # Необходимо протестировать этот метод
+        cities = self.get_cities()   # Здесь происходить вызов стороннего сервиса
+        cities = ", ".join(cities)
+        return f"Расположение офисов: {cities}."
 
 class DecorTestCase(SkyproTestCase):
     def setUp(self):

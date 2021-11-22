@@ -41,8 +41,9 @@ class AdressGetter:
 
 
 def test_show_cities():
-    # TODO напишите здесь функцию, тестирующую метод shod_cities
-    pass
+    adressgetter = AdressGetter()
+    # TODO Попробуйте мокнуть нужный метод здесь
+    assert adressgetter.show_cities() == "Расположение офисов: Санкт-Петербург, Самара, Краснодар."
 
 if __name__=="__main__":
     os.system("pytest")
