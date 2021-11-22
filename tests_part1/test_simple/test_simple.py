@@ -57,4 +57,4 @@ def test_wrong_arg():
 
 # Имитируем команду pytest при запуске модуля
 if __name__ == "__main__":
-    os.system("pytest test_simple")
+    os.system("pytest")

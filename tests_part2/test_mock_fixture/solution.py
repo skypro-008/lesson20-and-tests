@@ -47,4 +47,4 @@ def test_show_markets(adressgetter: AdressGetter):
     assert adressgetter.show_markets() == expected_string
 
 if __name__=="__main__":
-    os.system("pytest test_mock_fixture")
+    os.system("pytest")
