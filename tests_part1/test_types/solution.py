@@ -19,7 +19,7 @@ def divider(a, b):
     return a / b
 
 
-def test_summer():
+def test_divider():
     assert isinstance(divider(10,5), int), (
         "Функция divider почему-то выдаёт строку, тогда как должна делить числа")
     assert isinstance(divider(10,0), str), (
@@ -27,7 +27,7 @@ def test_summer():
     assert isinstance(divider("qwe",0), str), (
         "При получении других типов данных функция divider возвращает что-то другое вместо ошибки содержащей строку")
 
-def test_divider():
+def test_summer():
     assert isinstance(summer(2,2), int), (
         "Функция summer вместо результата с целым числом возвращает что-то другое")
     assert isinstance(summer(299,2), str), (
