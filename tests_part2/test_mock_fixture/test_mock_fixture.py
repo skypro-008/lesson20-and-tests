@@ -13,8 +13,6 @@
 #
 import requests
 import os
-from unittest.mock import MagicMock
-import requests
 import pytest
 
 # Класс, подлежащий тестированию

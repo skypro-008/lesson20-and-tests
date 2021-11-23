@@ -26,8 +26,6 @@
 
 import requests
 import os
-import requests
-from unittest.mock import MagicMock
 
 class AdressGetter:
     def get_cities(city):

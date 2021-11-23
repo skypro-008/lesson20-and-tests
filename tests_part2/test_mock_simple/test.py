@@ -3,7 +3,6 @@ from pathlib import Path
 import os
 import unittest
 
-from requests.models import HTTPError
 import test_mock
 import requests
 
