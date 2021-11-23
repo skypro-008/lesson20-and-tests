@@ -42,6 +42,7 @@ Pycharm может предложить вам сделать это после 
 
 - part1/test_simple
 - part1/test_simple-2
+- part1/test_types
 - part1/test_classes
 - part1/test_params
 - part1/test_fixtures

@@ -8,8 +8,8 @@ class AdressGetter:
         response = requests.get(f'https://give_me_adress.com?search={city}')
         return response.data
     
-    def show_cities(self):           # Необходимо протестировать этот метод
-        cities = self.get_cities()   # Здесь происходить вызов стороннего сервиса
+    def show_cities(self):           
+        cities = self.get_cities()   
         cities = ", ".join(cities)
         return f"Расположение офисов: {cities}."
 

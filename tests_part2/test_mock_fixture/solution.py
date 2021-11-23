@@ -4,25 +4,21 @@ from unittest.mock import MagicMock
 import requests
 import pytest
 
-# Класс, подлежащий тестированию
 class AdressGetter:
     def get_cities(city):
         response = requests.get(f'https://give_me_adress.com?search={city}')
         return response.data
     
-    # Необходимо протестировать этот метод
     def show_offices(self):
         cities = self.get_cities()
         cities = ", ".join(cities)
         return f"Расположение офисов: {cities}."
     
-    # Необходимо протестировать этот метод
     def show_warehouses(self):
         cities = self.get_cities()
         cities = ", ".join(cities)
         return f"Расположение cкладов: {cities}."
     
-    # Необходимо протестировать этот метод
     def show_markets(self):
         cities = self.get_cities()
         cities = ", ".join(cities)
