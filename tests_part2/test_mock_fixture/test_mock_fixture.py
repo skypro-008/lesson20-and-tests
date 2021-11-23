@@ -16,9 +16,9 @@ import os
 import pytest
 
 # Класс, подлежащий тестированию
-class AdressGetter:
+class AddressGetter:
     def get_cities(city):
-        response = requests.get(f'https://give_me_adress.com?search={city}')
+        response = requests.get(f'https://give_me_address.com?search={city}')
         return response.data
 
     def show_offices(self):
@@ -37,23 +37,23 @@ class AdressGetter:
         return f"Расположение магазинов: {cities}."
 
 @pytest.fixture
-def adressgetter():
+def addressgetter():
     # TODO напишите фикстуру здесь
     pass
 
 # Тесты уже готовы, Здесь ничего менять не нужно. 
 # Если они сработали, значит фикстура сделана правильно
-def test_show_offices(adressgetter: AdressGetter):
+def test_show_offices(addressgetter: AddressGetter):
     expected_string = "Расположение офисов: Санкт-Петербург, Самара, Краснодар."
-    assert adressgetter.show_offices() == expected_string
+    assert addressgetter.show_offices() == expected_string
 
-def test_show_warehouses(adressgetter: AdressGetter):
+def test_show_warehouses(addressgetter: AddressGetter):
     expected_string = "Расположение cкладов: Санкт-Петербург, Самара, Краснодар."
-    assert adressgetter.show_warehouses() == expected_string
+    assert addressgetter.show_warehouses() == expected_string
 
-def test_show_markets(adressgetter: AdressGetter):
+def test_show_markets(addressgetter: AddressGetter):
     expected_string = "Расположение магазинов: Санкт-Петербург, Самара, Краснодар."
-    assert adressgetter.show_markets() == expected_string
+    assert addressgetter.show_markets() == expected_string
 
 if __name__=="__main__":
     os.system("pytest")

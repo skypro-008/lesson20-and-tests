@@ -1,6 +1,6 @@
 # В этом задании Вам предстоит сделать мок метода класса.
 # Представим простой сценарий:
-# У нас имеется класс AdressGetter один из методов которого,
+# У нас имеется класс AddressGetter один из методов которого,
 # использует услуги платных сервисов с целью получения 
 # списка предлагаемых адресов (в данном случае для упрощения - городов).
 # К примеру, при запросе на сторонний сервис данная функция возвращает список вида:
@@ -13,13 +13,13 @@
 #
 # Расположение офисов: Санкт-Петербург, Самара, Краснодар.
 #
-# Попробуйте мокнуть метод get_adress класса AdressGetter, так чтобы
+# Попробуйте мокнуть метод get_address класса AddressGetter, так чтобы
 # show_cities работал корректно и получал необходимые ему данные.
 # Для этого следуйте следующим шагам
 #
 # 1. В теле тестовой функции test_show_cities:
-#    - Создайте экземпляр класса AdressGetter     
-#    - Cделайте мок метода get_cities класса AdressGetter
+#    - Создайте экземпляр класса AddressGetter     
+#    - Cделайте мок метода get_cities класса AddressGetter
 #      в качестве аргумента, используйте пожалуйста список: 
 #      ["Санкт-Петербург", "Самара", "Краснодар"], это необходимо для проверки.
 #    - вызовите метод в теле функции show_cities и проверьте ожидаемый результат
@@ -27,9 +27,9 @@
 import requests
 import os
 
-class AdressGetter:
+class AddressGetter:
     def get_cities(city):
-        response = requests.get(f'https://give_me_adress.com?search={city}')
+        response = requests.get(f'https://give_me_address.com?search={city}')
         return response.data
     
     def show_cities(self):           # Необходимо протестировать этот метод
@@ -39,9 +39,9 @@ class AdressGetter:
 
 
 def test_show_cities():
-    adressgetter = AdressGetter()
+    addressgetter = AddressGetter()
     # TODO Попробуйте мокнуть нужный метод здесь
-    assert adressgetter.show_cities() == "Расположение офисов: Санкт-Петербург, Самара, Краснодар."
+    assert addressgetter.show_cities() == "Расположение офисов: Санкт-Петербург, Самара, Краснодар."
 
 if __name__=="__main__":
     os.system("pytest")

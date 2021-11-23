@@ -14,9 +14,9 @@ basepath = Path(*parts[:basefolder_index + 1])
 sys.path.append(str(basepath))
 from ttools.skyprotests.tests import SkyproTestCase  # noqa: E402
 
-class AdressGetter:
+class AddressGetter:
     def get_cities(city):
-        response = requests.get(f'https://give_me_adress.com?search={city}')
+        response = requests.get(f'https://give_me_address.com?search={city}')
         return response.data
     
     def show_cities(self):           # Необходимо протестировать этот метод
@@ -24,7 +24,7 @@ class AdressGetter:
         cities = ", ".join(cities)
         return f"Расположение офисов: {cities}."
 
-class BrokenAdressGetter:
+class BrokenAddressGetter:
     def get_cities(city):
         return ["Санкт-Петербург", "Самара", "Краснодар"]
     
