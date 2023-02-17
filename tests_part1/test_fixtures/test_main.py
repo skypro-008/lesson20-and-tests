@@ -32,7 +32,7 @@ def summer(*args):
     return sum(args)
 
 
-def list_creator():
+def list_creater():
     # TODO Напишите фикстуру здесь
     pass
 
